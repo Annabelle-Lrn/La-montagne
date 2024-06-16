@@ -1,1 +1,10 @@
-@import'settings', 'header','principale';
+@import'settings', 'header','principale','secondaire';
+button{
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 50px 0;
+    padding: 15px 40px;
+    font-weight: 900;
+    cursor: pointer;
+}

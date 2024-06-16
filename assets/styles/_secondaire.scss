@@ -1,0 +1,53 @@
+.secondaire{
+   display: flex;
+   margin: 0 auto;
+   padding-top: 40px;
+   .entete{
+    text-align: center;
+    p{
+        margin-bottom: 20px;
+    }
+   
+    h3{
+        line-height: 30px;
+        font-family: "Merryweather",Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+       
+    }
+    }
+    .sedmagna,
+    .primis{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .primis::after{
+        content: "";
+        height:100%;
+        top: -40px;
+        transform: rotate(180)deg;
+        border: 1px solid $grey;
+        position: absolute;
+    }
+    .photo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 30px 70px;
+    }
+    img{
+        width: 100%;
+    }
+   .texte{
+    padding: 0 70px;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin-bottom: 20px;
+   }
+   button{
+    margin: auto 35%;
+   }
+}

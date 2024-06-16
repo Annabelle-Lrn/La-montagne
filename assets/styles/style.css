@@ -8,7 +8,7 @@
 
 body {
   background: url(../images/bg.jpg) fixed center/cover;
-  margin: 0 150px;
+  margin: 0 260px;
 }
 
 li {
@@ -22,8 +22,7 @@ li:hover {
 section {
   background: rgb(248, 248, 248);
 }
-section h2,
-section h3 {
+section h2 {
   font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -43,7 +42,7 @@ header .header-part1 {
 }
 header .header-part1 h1 {
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 5.4rem;
   letter-spacing: 5px;
   line-height: 150px;
   margin-bottom: 40px;
@@ -56,7 +55,7 @@ header .header-part1 p {
 }
 header .header-part1 i {
   color: rgb(248, 248, 248);
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   border: 2px solid;
   border-radius: 55%;
   padding: 30px;
@@ -70,49 +69,126 @@ header nav {
 }
 header nav li {
   margin: 0 40px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 600;
   justify-content: space-around;
 }
 header nav .left-nav li:hover {
   background: rgb(209, 207, 207);
-  padding: 30px;
+  padding: 30px 40px;
 }
 
 .principale {
-  padding: 100px;
+  padding: 110px 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.principale::after {
+  content: "";
+  width: 108%;
+  border: 1px solid rgb(216, 214, 214);
 }
 .principale .date {
   position: relative;
-  text-align: center;
+  padding: 0 400px;
   margin-bottom: 50px;
 }
-.principale .date::before {
+.principale .date p::before {
   content: "";
-  width: 400px;
+  width: 30%;
   border: 1px solid rgb(216, 214, 214);
   top: 50%;
   left: 10%;
   position: absolute;
 }
-.principale .date::after {
+.principale .date p::after {
   content: "";
-  width: 400px;
+  width: 30%;
   border: 1px solid rgb(216, 214, 214);
   top: 50%;
   right: 10%;
   position: absolute;
 }
 .principale h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 30px;
-  line-height: 50px;
+  line-height: 80px;
 }
 .principale .texte {
-  padding: 0 auto;
+  padding: 0 20% 50px;
 }
 .principale p {
+  font-size: 1.2rem;
   font-style: italic;
-  text-align: justify;
+  text-align: center;
+  line-height: 40px;
+}
+.principale img {
+  width: 100%;
+  padding: auto 50px;
+}
+
+.secondaire {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.secondaire .entete {
+  text-align: center;
+}
+.secondaire .entete p {
+  margin-bottom: 20px;
+}
+.secondaire .entete h3 {
+  line-height: 30px;
+  font-family: "Merryweather", Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.secondaire .sedmagna,
+.secondaire .primis {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.secondaire .primis::after {
+  content: "";
+  height: 100%;
+  top: -40px;
+  transform: rotate(180) deg;
+  border: 1px solid rgb(216, 214, 214);
+  position: absolute;
+}
+.secondaire .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 70px;
+}
+.secondaire img {
+  width: 100%;
+}
+.secondaire .texte {
+  padding: 0 70px;
+  font-size: 1.4rem;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.secondaire button {
+  margin: auto 35%;
+}
+
+button {
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 50px 0;
+  padding: 15px 40px;
+  font-weight: 900;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

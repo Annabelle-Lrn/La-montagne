@@ -1,20 +1,31 @@
 .principale{
-    padding: 100px;
+    padding: 110px 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::after{
+        content: "";
+        width: 108%;
+        border: 1px solid $grey;
+    }
     .date{
         position: relative;
-        text-align: center;
+        padding: 0 400px;
         margin-bottom: 50px;
-        &::before{
+               
+        p::before{
             content:"";
-            width: 400px;
+            width: 30%;
             border: 1px solid $grey;
             top:50%;
             left: 10%;
             position: absolute;
         }
-        &::after{
+        p::after{
             content:"";
-            width: 400px;
+            width: 30%;
             border: 1px solid $grey;
             top:50%;
             right: 10%;
@@ -23,15 +34,21 @@
         
     }
     h2{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         margin-bottom: 30px; 
-        line-height: 50px;
+        line-height: 80px;
     }
     .texte{
-        padding: 0 auto;
+        padding: 0 20% 50px;
     }
     p{
+        font-size: 1.2rem;
         font-style: italic;
-        text-align: justify;
+        text-align: center;
+        line-height: 40px;
+    }
+    img{
+        width: 100%;
+        padding: auto 50px;
     }
 }
