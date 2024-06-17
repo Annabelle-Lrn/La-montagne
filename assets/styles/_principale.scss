@@ -1,9 +1,6 @@
 .principale{
-    padding: 110px 50px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+    margin: 0 auto;
 
     &::after{
         content: "";
@@ -12,43 +9,53 @@
     }
     .date{
         position: relative;
-        padding: 0 400px;
-        margin-bottom: 50px;
-               
+        padding: 70px 0;               
         p::before{
             content:"";
-            width: 30%;
+            width: 40%;
             border: 1px solid $grey;
             top:50%;
-            left: 10%;
+            left: 0;
             position: absolute;
+            @media screen and (max-width:700px){
+                width: 30%;
+            }
         }
         p::after{
             content:"";
-            width: 30%;
+            width: 40%;
             border: 1px solid $grey;
             top:50%;
-            right: 10%;
+            right: 0;
             position: absolute;
+            @media screen and (max-width:700px){
+                width: 30%;
+            }
         }
         
     }
     h2{
-        font-size: 3.5rem;
-        margin-bottom: 30px; 
-        line-height: 80px;
+       @include title;
+       font-size: 3rem;
+       @media screen and (max-width:700px){
+        font-size: 1.8rem;
+        }
     }
     .texte{
         padding: 0 20% 50px;
     }
     p{
-        font-size: 1.2rem;
-        font-style: italic;
-        text-align: center;
-        line-height: 40px;
+        width: 60%;
+        margin:30px auto;
+        line-height: 35px;
+        font-style:italic;
+        font-size: 0.8rem;
     }
     img{
         width: 100%;
         padding: auto 50px;
+    }
+    .btn{
+        margin:50px 0 90px;
     }
 }

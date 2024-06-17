@@ -1,53 +1,30 @@
 .secondaire{
-   display: flex;
-   margin: 0 auto;
-   padding-top: 40px;
-   .entete{
-    text-align: center;
-    p{
-        margin-bottom: 20px;
-    }
-   
-    h3{
-        line-height: 30px;
-        font-family: "Merryweather",Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-       
-    }
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-top: 1px solid $grey1;
+
+    @media screen and (max-width:700px) {
+        grid-template-columns: 1fr;        
     }
     .sedmagna,
     .primis{
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        padding: 60px;
     }
-    .primis::after{
-        content: "";
-        height:100%;
-        top: -40px;
-        transform: rotate(180)deg;
-        border: 1px solid $grey;
-        position: absolute;
+    span{
+        font-size: 0.8rem;
     }
-    .photo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 30px 70px;
+    h3{
+        margin: 20px 0;
+        @include title;
+        line-height: 28px;
     }
-    img{
-        width: 100%;
+    p{
+        text-align: left;
+        line-height: 30px;
+        margin: 30px 0;
+        font-size: 0.8rem;
     }
-   .texte{
-    padding: 0 70px;
-    font-size: 1.4rem;
-    line-height: 40px;
-    margin-bottom: 20px;
-   }
-   button{
-    margin: auto 35%;
-   }
+    .sedmagna{
+        border-right: 1px solid $grey1;
+    }
 }

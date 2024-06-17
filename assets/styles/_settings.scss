@@ -2,33 +2,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 $white:rgb(248, 248, 248);
-$black:rgb(34, 34, 34);
+$black:rgb(17, 17, 17);
 $grey:rgb(216, 214, 214);
+$grey1: rgb(209,209,209);
+$grey2:rgb(233,233,233);
 
+@mixin title {
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: url(../images/bg.jpg) fixed center/cover;
-    margin: 0 260px; 
+    margin: 0 auto; 
+    text-align: center;
+    font-family:"Merriweather",sans-serif;
+    max-width: 1300px;
+    &::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: $black;
+        animation: animbefore 1.5s ease forwards;
+        animation-delay: 0.15s;
+
+        @keyframes animbefore {
+            to{
+                opacity: 0;
+            }
+        
+            
+        }
+    }
     }
 li{
     list-style: none;
-    display: inline;
-    &:hover{
-        color:$black;
-    }
 }
-section{
-    background: $white;
-    h2{
-        font-family: "Inter",Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    p{
-        font-family: "Merryweather";
-    }
+a, a:visited{
+    color: $white;
+}
+.btn{
+    background:transparent;
+    border: 2px solid $black;
+    height: 45px;
+    width: 170px;
+    cursor:pointer;
+    @include title;
 }
